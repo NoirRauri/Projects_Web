@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Principal Menu</title>
+</head>
+<body>
+    <h2>TABLAS REGULARES E IRREGULARES</h2>
+    <!-- Tablas -->
+    <table border="1">
+        <caption>Tabla Regular</caption>
+        <!-- Columnas -->
+        <tr>
+            <!-- filas th Campo principal -->
+            <th>Nombre</th>
+            <th>Apellido 1</th>
+            <th>Apellido 2</th>
+        </tr>
+        <tr>
+            <!-- td Datos de los campos principales -->
+            <td>Pedro</td>
+            <td>Perez</td>
+            <td>Rodriguez</td>
+        </tr>
+        <tr>
+            <td>María</td>
+            <td>Sosa</td>
+            <td>Soto</td>
+        </tr>
+    </table>
+
+    <table border="1" style="margin-top: 20px;">
+        <caption>Tabla Regular</caption>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido 1</th>
+            <th>Apellido 2</th>
+        </tr>
+        <tr>
+            <!-- Colspan consuma N cantidad de culumnas 
+                y rowspan N cantidad de filas -->
+            <td colspan="2" rowspan="2">Pedro Perez</td>
+            <td>Rodriguez</td>
+        </tr>
+        <tr>
+            <td>Hola</td>
+        </tr>
+    </table>
+
+    <h4>Ejercicio de tabla 01</h4>
+
+    <table border="1">
+        <tr>
+            <th rowspan="2"></th>
+            <th colspan="2">1° EVAL</th>
+            <th colspan="2">2° EVAL</th>
+            <th colspan="2">3° EVAL</th>
+        </tr>
+        <tr>
+            <th style="background-color: green;">Aprobado</th>
+            <th style="background-color: red;">Suspendido</th>
+            <th style="background-color: green;">Aprobado</th>
+            <th style="background-color: red;">Suspendido</th>
+            <th style="background-color: green;">Aprobado</th>
+            <th style="background-color: red;">Suspendido</th>
+        </tr>
+        <tr>
+            <th>Informática</th>
+            <td>20</td>
+            <td>02</td>
+            <td>19</td>
+            <td>03</td>
+            <td>22</td>
+            <td>00</td>
+        </tr>
+        <tr>
+            <th>Matemáticas</th>
+            <td>10</td>
+            <td>12</td>
+            <td>15</td>
+            <td>07</td>
+            <td>12</td>
+            <td>10</td>
+        </tr>
+    </table>
+
+    <h4>Ejercicio de tabla 02</table></h4>
+    
+    <table border="1">
+        <tr>
+            <th>Horas</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miercoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+        </tr>
+        <tr>
+            <th>8:00-9:00</th>
+            <td rowspan="2" style="background-color: tomato; text-align: center;">Matemáticas</td>
+            <td style="background-color: brown; color: antiquewhite; text-align: center">Lengua</td>
+            <td style="text-align: center;">Música</td>
+            <td></td>
+            <td rowspan="2" style="background-color: tomato; text-align: center">Matemáticas</td>
+        </tr>
+        <tr>
+            <th>9:00-10:00</th>
+            <td colspan="2" style="text-align: center;">Inglés</td>
+            <td style="background-color: fuchsia; text-align: center">E. Física</td>
+        </tr>
+        <tr>
+            <th>10:00-10:30</th>
+            <td colspan="5" style="background-color: forestgreen; text-align: center">Recreo</td>
+        </tr>
+        <tr>
+            <th>10:30-11:30</th>
+            <td style="background-color: fuchsia; text-align: center">E.Física</td>
+            <td style="text-align: center;">Valenciano</td>
+            <td rowspan="2" style="background-color: brown; color: antiquewhite; text-align: center">Lengua</td>
+            <td style="background-color: yellow; text-align: center">Informática</td>
+            <td style="text-align: center;">Inglés</td>
+        </tr>
+        <tr>
+            <th>12:30-13:30</th>
+            <td style="text-align: center;">Música</td>
+            <td style="background-color: fuchsia; text-align: center">E. Física</td>
+            <td rowspan="2" style="background-color: tomato; text-align: center">Matemáticas</td>
+            <td style="background-color: yellow; text-align: center">Informática</td>
+        </tr>
+        <tr>
+            <th>13:30-14:30</th>
+            <td></td>
+            <td style="background-color: yellow; text-align: center">Informática</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,21 @@
+*{
+    background-color: black;
+    color: white;
+    font-size: smaller;
+    font-family: serif;
+}
+header{
+
+    background-color: blue;
+    width: 100%;
+    height: 40%;
+}
+nav{
+    background-color: aquamarine;
+
+}
+nav>a{
+
+    background-color: inherit;
+    text-decoration: none;
+}

@@ -1,0 +1,48 @@
+#titulo {
+  color: tomato;
+}
+
+p.texto {
+  color: slateblue;
+}
+
+p.especial {
+  color: mediumspringgreen;
+}
+
+div p {
+  color: aquamarine;
+}
+
+div h2,
+div h3 {
+  color: brown;
+}
+
+* {
+  font-size: 24px;
+  color: black;
+}
+
+/* Comentario */
+
+/* 
+.color{
+    color: #00f0f0;
+}
+
+.color{
+    color: rgb(0, 255, 255);
+}
+*/
+.color {
+  /* border: 1px black solid; */
+  border-style: solid;
+  border-color: aqua;
+  border-radius: 5px;
+  border-width: 0.1rem; /*em=Medida relativa, rem=Medida relativa*/
+}
+
+.fondo {
+  background-color: aquamarine;
+}

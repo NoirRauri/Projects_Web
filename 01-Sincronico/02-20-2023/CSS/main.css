@@ -1,0 +1,134 @@
+/* Comienzo CSS */
+* {
+  color: honeydew;
+}
+/* Comienzo CSS body */
+body {
+  background-color: #1c1e21;
+}
+/* Comienzo CSS Header */
+header {
+  position: fixed;
+  background-color: #35373b;
+  width: 100%;
+  z-index: 1;
+  height: 9%;
+  top: 0;
+  left: 0;
+  border-bottom: 3px honeydew;
+}
+
+nav {
+  width: 100%;
+}
+
+.fbIcon,
+.search,
+.userIcon {
+  position: relative;
+  display: inline;
+}
+
+.fbIcon {
+  width: auto;
+}
+
+.search {
+  left: 15%;
+  bottom: 2em;
+  width: 300px;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+}
+
+input#search {
+  width: 40%;
+  height: 50px;
+  border: none;
+  font-size: 10pt;
+  color: #d4d4d4;
+  padding-left: 45px;
+  background: #2b303b;
+  border-radius: 40px;
+}
+
+.search > img {
+  position: absolute;
+  top: 5%;
+  width: 20px;
+  margin-left: 12px;
+  z-index: 1;
+}
+
+.userIcon {
+  left: 30%;
+}
+
+.messengerI,
+.notificationI,
+.profilePhotoI {
+  display: inline;
+}
+
+.userIcon > div > img {
+  border-radius: 50%;
+  width: 2.5em;
+  padding: 0.5em;
+}
+
+/* comienzo CSS main */
+
+main {
+  position: relative;
+  width: 100%;
+  top: 60px;
+}
+
+.navLeft,
+.central,
+.news {
+  display: inline-flex;
+  flex-direction: column;
+  width: 20%;
+  margin: 0;
+}
+
+.central {
+  /* background-color: rgb(21, 127, 220); */
+  margin: 30px;
+  width: 50%;
+}
+
+.news {
+  background-color: blueviolet;
+}
+
+.navLeft li img {
+  width: 10%;
+}
+
+article ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+article ul li {
+  padding: 15px 0;
+}
+a {
+  text-decoration: none;
+}
+
+span.history {
+  background-color: #81848a;
+  margin-left: 4%;
+}
+
+.history img {
+  width: 15%;
+  height: 30%;
+}
+/* Comienzo CSS aside */
+
+/* Comienzo CSS footer */

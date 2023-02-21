@@ -1,0 +1,58 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  color: gray;
+}
+
+body {
+  background-color: #67abe2;
+}
+
+div > h2 {
+  font-size: 30pt;
+  text-align: left;
+}
+
+hr {
+  position: relative;
+  right: 24%;
+  bottom: 25px;
+  margin-bottom: 5%;
+  width: 250px;
+  border-bottom: 2.5px solid gray;
+}
+
+section {
+  margin-bottom: 15%;
+}
+
+form {
+  margin: 2% auto;
+  background-color: white;
+  width: 500px;
+  height: 600px;
+  padding: 40px;
+  border: 1px black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px rgb(31, 29, 29);
+}
+
+#message,
+#email,
+#nombre {
+  width: 90%;
+  height: 40px;
+  padding-left: 45px;
+  font-size: 10pt;
+  outline: none;
+  border: none;
+  border-bottom: 3px solid gray;
+}
+
+#sendM {
+  margin-left: 65%;
+  margin-top: 2%;
+  padding: 10px;
+  font-size: 15pt;
+  border: none;
+  border: 3px solid gray;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/payment.css" />
+    <title>Payment</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <section class="leftSide">
+        <div class="leftSide1">
+          <h1>CREDIT CARD DETAILS</h1>
+        </div>
+        <div class="leftSide2">
+          <section class="card">
+            <div>
+              <label for="">Card Number</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="cardNum"
+                id="cardNum"
+                placeholder="1234-1234-1234-1234"
+              />
+            </div>
+          </section>
+          <section class="card">
+            <div>
+              <label for="">Name On Card</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="nameCard"
+                id="nameCard"
+                placeholder="Fisrt-Name  Last-Name"
+              />
+            </div>
+          </section>
+          <section class="card">
+            <div class="LdateCard">
+              <label for="">Expiry Date</label>
+              <label for="">CSV No.</label>
+            </div>
+            <div class="IdateCard">
+              <input
+                type="number"
+                name="mouth"
+                id="mouth"
+                max="01"
+                min="31"
+                placeholder="11"
+              />
+              <input
+                type="number"
+                name="year"
+                id="year"
+                max="2023"
+                min="1990"
+                placeholder="10"
+              />
+              <input
+                type="number"
+                name="csv"
+                id="csv"
+                max="999"
+                min="000"
+                placeholder="636"
+              />
+            </div>
+          </section>
+        </div>
+      </section>
+      <sectio class="rightSide">
+        <img src="image/dog.png" alt="dog" />
+      </sectio>
+    </form>
+  </body>
+</html>

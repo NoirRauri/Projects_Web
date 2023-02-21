@@ -6,7 +6,7 @@
     <title>Facebook</title>
   </head>
   <body>
-    <!-- encabezado -->
+    <!-- encabezado/navegacion -->
     <header>
       <nav>
         <div class="fbIcon">
@@ -34,7 +34,7 @@
         </div>
       </nav>
     </header>
-    <!-- barra de navegacion -->
+    <!-- barra de navegacion izquierda-->
     <main>
       <section class="navLeft">
         <article>
@@ -78,40 +78,45 @@
       </section>
       <!-- secciones del facebook -->
       <section class="central">
-        <article>
-          <span class="history">
-            <img src="image/NT.png" alt="history" />
+        <!-- historias -->
+        <article class="history">
+          <span class="history" style="background-image: url('image/NT.png')">
+            <!-- <img src="image/NT.png" alt="history" /> -->
           </span>
-          <span class="history">
-            <img src="image/NT.png" alt="history" />
+          <span class="history" style="background-image: url('image/NT.png')">
+            <!-- <img src="image/NT.png" alt="history" /> -->
           </span>
-          <span class="history">
-            <img src="image/NT.png" alt="history" />
+          <span class="history" style="background-image: url('image/NT.png')">
+            <!-- <img src="image/NT.png" alt="history" /> -->
           </span>
-          <span class="history">
-            <img src="image/NT.png" alt="history" />
+          <span class="history" style="background-image: url('image/NT.png')">
+            <!-- <img src="image/NT.png" alt="history" /> -->
           </span>
-          <span class="history">
-            <img src="image/NT.png" alt="history" />
+          <span class="history" style="background-image: url('image/NT.png')">
+            <!-- <img src="image/NT.png" alt="history" /> -->
           </span>
         </article>
+        <!-- sobre -->
         <article class="about">
-          <span>
-            <img width="20px" src="image/avatar.jpg" alt="profileIcon" />
+          <span class="profileAbout">
+            <img src="image/avatar.jpg" alt="profileIcon" />
           </span>
-          <input type="text" placeholder="¿Que estás pensado?" />
+          <input id="about" type="text" placeholder="¿Que estás pensado?" />
           <hr />
           <span>
             <img width="20px" src="image/MS.png" alt="stream" />
-            <span>Video en vivo</span> </span
-          ><span>
+            <span>Video en vivo</span>
+          </span>
+          <span>
             <img width="20px" src="image/MS.png" alt="photo/video|" />
-            <span>Foto/video</span> </span
-          ><span>
+            <span>Foto/video</span>
+          </span>
+          <span>
             <img width="20px" src="image/MS.png" alt="activity" />
             <span>Sentimiento/actividad</span>
           </span>
         </article>
+        <!-- en vivos -->
         <article class="stream">
           <img width="20px" src="image/MS.png" alt="camara" />
           <span>En vivo</span>

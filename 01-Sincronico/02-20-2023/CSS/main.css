@@ -1,5 +1,7 @@
 /* Comienzo CSS */
 * {
+  margin: 0;
+  padding: 0;
   color: honeydew;
 }
 /* Comienzo CSS body */
@@ -16,10 +18,6 @@ header {
   top: 0;
   left: 0;
   border-bottom: 3px honeydew;
-}
-
-nav {
-  width: 100%;
 }
 
 .fbIcon,
@@ -94,14 +92,21 @@ main {
   margin: 0;
 }
 
+.navLeft {
+  padding: 0;
+  margin: 0;
+  background-color: #35373b;
+}
+
 .central {
-  /* background-color: rgb(21, 127, 220); */
-  margin: 30px;
+  margin: 10px 30px;
   width: 50%;
 }
 
 .news {
-  background-color: blueviolet;
+  background-color: #35373b;
+  padding: 0;
+  margin: 0;
 }
 
 .navLeft li img {
@@ -120,15 +125,62 @@ a {
   text-decoration: none;
 }
 
-span.history {
-  background-color: #81848a;
-  margin-left: 4%;
+article.about,
+article.stream,
+article.publicity {
+  padding: 15px;
+  margin-bottom: 5px;
+  background-color: #35373b;
+  border-radius: 15px;
 }
 
-.history img {
+article.history {
+  padding: 15px;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  /* background-color: #35373b; */
+}
+
+span.history {
+  background-color: #81848a;
+  display: inline-block;
+  margin-right: 3px;
+  width: 130px;
+  height: 180px;
+  border-radius: 25px;
+}
+
+span.history img {
   width: 15%;
   height: 30%;
 }
+
+.about span img {
+  width: 20px;
+  border-radius: 50%;
+}
+
+.about span.profileAbout img {
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 15px;
+  z-index: 1;
+  width: 25px;
+  border-radius: 50%;
+}
+
+.about input {
+  border: none;
+  margin: 10px;
+  border-radius: 20px;
+  width: 85%;
+  height: 40px;
+  font-size: 10pt;
+  color: #d4d4d4;
+  padding-left: 45px;
+  background: #2b303b;
+}
+
 /* Comienzo CSS aside */
 
 /* Comienzo CSS footer */

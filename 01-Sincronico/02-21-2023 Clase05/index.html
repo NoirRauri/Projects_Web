@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Formularios</title>
+  </head>
+
+  <body>
+    <!-- get envia la informacion, post oculta la informacion de la url -->
+    <form method="get" action="js/msn.js">
+      <div>
+        <!-- maxlength, r -->
+        <div class="input">
+          <label for="">Nombre </label>
+          <input type="text" name="cedula" id="cedula" maxlength="50" />
+        </div>
+      </div>
+      <div>
+        <div class="input">
+          <label for="">Contraseña </label>
+          <input type="password" name="pass" id="pass" maxlength="8" />
+        </div>
+      </div>
+      <div>
+        <div class="input">
+          <label for="">Contraseña </label>
+          <input type="email" name="email" id="email" />
+        </div>
+      </div>
+      <div>
+        <div class="input">
+          <label for="">telefono </label>
+          <input type="tel" name="telefono" id="telefono" />
+        </div>
+      </div>
+      <div>
+        <div class="input">
+          <label for="">color </label>
+          <input type="color" name="color" id="color" />
+        </div>
+      </div>
+      <div>
+        <div class="input">
+          <label for="">Nacimiento </label>
+          <input type="date" name="fechaN" id="fechaN" />
+        </div>
+      </div>
+      <div>
+        <div class="input">
+          <label for="">hora </label>
+          <input type="time" name="hora" id="hora" />
+        </div>
+      </div>
+      <div>
+        <div class="input">
+          <label for="">archivo </label>
+          <input type="file" name="archivo" id="archivo" />
+        </div>
+      </div>
+      <div>
+        <div class="input">
+          <label for="">Rango Edad </label>
+          <input
+            type="range"
+            name="rangoEDAD"
+            id="rangoEDAD"
+            max="30"
+            min="1"
+          />
+        </div>
+      </div>
+      <div>
+        <div class="input">
+          <label for="">Url </label>
+          <input type="url" name="direccion" id="direccion" />
+        </div>
+      </div>
+      <div>
+        <div class="input">
+          <label for="">nissan </label>
+          <input type="radio" name="marca" id="nissan" />
+          <label for="">toyota </label>
+          <input type="radio" name="marca" id="toyota" />
+          <label for="">BMW </label>
+          <input type="radio" name="marca" id="radio" />
+        </div>
+      </div>
+      <div>
+        <div class="input">
+          <label for="">PIZZA </label>
+          <input type="checkbox" name="cheak" id="pizza" />
+          <label for="">HAMBRGUESA </label>
+          <input type="checkbox" name="cheak" id="hamburguesa" />
+          <label for="">TACOS </label>
+          <input type="checkbox" name="cheak" id="tacos" />
+        </div>
+      </div>
+      <div>
+        <div class="input">
+          <label for="">Tallas </label>
+          <select name="tallas" id="">
+            <option value="S">talla S</option>
+            <option value="M">talla M</option>
+            <option value="L">talla L</option>
+            <option value="XL">talla XL</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div class="input">
+          <label for="">Direccion: </label>
+          <textarea name="address" id="address" cols="30" rows="10"></textarea>
+        </div>
+      </div>
+      <div>
+        <input type="hidden" name="zasdasd" />
+      </div>
+      <input type="reset" value="limpiar" />
+      <input type="submit" value="Enviar datos" />
+    </form>
+    <script src="js/msn.js"></script>
+  </body>
+</html>

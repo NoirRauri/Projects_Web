@@ -1,0 +1,35 @@
+.home{
+    color: tomato !important;
+}
+
+.bgimg{
+    background-image: url('../img/intro-hero.jpg');
+}
+
+.navbar-light .navbar-toggler {
+    border: none;
+}
+
+.btn-primary.btn-shadow {
+    border-radius: .2rem;
+    box-shadow: 0 .5rem 1.25rem -.5rem red;
+}
+
+.btn-primary{ 
+    background-color: tomato;
+    border: none;
+}
+
+.btn-primary:hover{
+    background-color: red;
+    border: red;
+}
+
+.product-thumb img{
+    display: block;
+    width: 100%;
+}
+
+.product-cart-alt{
+    border-radius: none;
+}

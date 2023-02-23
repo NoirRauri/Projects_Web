@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <!-- httpsthemes.getbootstrap.compreviewtheme_id=35287 -->
+  <body>
+    <!-- Main -->
+    <main>
+      <!-- Header -->
+      <!-- d-block ...visible on all
+            navbar-sticky ... fixed -->
+      <header class="navbar d-block navbar-expand-lg navbar-light bg-light">
+        <nav class="container">
+          <!-- navbar-brand... for your company, product, or project name.
+                d.none... hidden(invisible) on all
+                d-sm-block... hidden only on xs 
+                me-4... The default margin on blockquotes is 1em 40px
+                order-lg-1... order with respect to number -->
+          <a
+            href="Index.html"
+            class="navbar-brand d-none d-sm-block me-4 order-lg-1"
+          >
+            <img src="img/logo-dark.png" alt="Catzilla" width="142" />
+          </a>
+          <!-- d-sm-none... hidden only on sm
+                me-2... medida relativa
+                order-lg-1... order with repect to number -->
+          <a href="Index.html" class="navbar-brand d-sm-none me-2 order-lg-1">
+            <img src="img/logo-icon.png" alt="Catzilla" width="74" />
+          </a>
+          <!-- d-flex... flexbox container
+                order-lg-3... esta en al 3° posicion -->
+          <div class="navbar-brand d-flex align-items-center order-lg-3">
+            <button
+              class="navbar-toggler collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarCollapse"
+              aria-expanded="false"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a
+              href="#"
+              class="navbar-brand d-none d-lg-flex collapse"
+              role="button"
+              aria-expanded="false"
+              aria-controls="searchBox"
+              title="Search"
+            >
+              <div>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </a>
+            <a href="" class="navbar-brand ms-2" title="Account">
+              <div>
+                <i class="fa-regular fa-user"></i>
+              </div>
+            </a>
+          </div>
+          <!-- navbar-collapse... when their content collapses behind a button
+              show... Shows a collapsible element -->
+          <div
+            class="navbar-collapse me-auto order-lg-2 collapse show"
+            id="navbarCollapse"
+          >
+            <!-- Search (mobile)-->
+            <div class="d-lg-none py-3">
+              <div class="input-group">
+                <span class="input-group-text">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <input
+                  type="text"
+                  class="form-control rounded-start"
+                  placeholder="what do you need?"
+                />
+              </div>
+            </div>
+            <!-- Location dropdown-->
+            <ul class="navbar-nav navbar-mega-nav ms-lg-4 pe-lg-2 me-lg-2">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle ps-lg-0"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  ><i class="fa-solid fa-location-dot"></i> New York</a
+                >
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Los Angeles</a></li>
+                  <li><a class="dropdown-item" href="#">Chicago</a></li>
+                  <li><a class="dropdown-item" href="#">Houston</a></li>
+                  <li><a class="dropdown-item" href="#">Philadelphia</a></li>
+                  <li><a class="dropdown-item" href="#">San Diego</a></li>
+                  <li><a class="dropdown-item" href="#">Miami</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!-- Primary menu-->
+            <ul class="navbar-nav navbar-mega-nav ms-lg-4 pe-lg-2 me-lg-2">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle ps-lg-0"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Cuisine</a
+                >
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Burger & fries</a></li>
+                  <li><a class="dropdown-item" href="#">Noodles</a></li>
+                  <li><a class="dropdown-item" href="#">Grill & Steaks</a></li>
+                  <li><a class="dropdown-item" href="#">Fish & SeaFood</a></li>
+                  <li><a class="dropdown-item" href="#">Haute Cuisine</a></li>
+                  <li><a class="dropdown-item" href="#">Chiken & Snaks</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Back to main demo</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- Banner seccion -->
+      <section
+        class="bg-darker bg-size-cover bg-position-center py-5 py-lg-10"
+        style="background-image: url(img/hero-bg.jpg)"
+      >
+        <div class="container pb-5">
+          <div class="row justify-content-center pb-5">
+            <div class="col-xl-6 col-lg-7 col-md-8 col-sm-10 text-center">
+              <h5 class="text-light fw-light">
+                #1 Food Delivery Service since 2010
+              </h5>
+              <div class="h1 text-light mb-3 pb-4">
+                We deliver your favorite food fresh &amp; fast in
+                <div class="dropdown d-inline-block ms-1">
+                  <a class="dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    >New York</a
+                  >
+                  <div class="dropdown-menu dropdown-menu-end">
+                    <a class="dropdown-item fs-base" href="#">Los Angeles</a
+                    ><a class="dropdown-item fs-base" href="#">Chicago</a
+                    ><a class="dropdown-item fs-base" href="#">Houston</a
+                    ><a class="dropdown-item fs-base" href="#">Philadelphia</a
+                    ><a class="dropdown-item fs-base" href="#">San Diego</a
+                    ><a class="dropdown-item fs-base" href="#">Miami</a>
+                  </div>
+                </div>
+              </div>
+              <a class="btn btn-primary" href="#cuisine" data-scroll=""
+                >What do you want to eat?</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Category Seccion -->
+      <section
+        class="container py-4 my-lg-3 py-sm-5"
+        id="cuisine"
+        tabindex="-1"
+        style="outline: none"
+      >
+        <h2 class="text-center pt-4 pt-sm-3">Trending food in your city</h2>
+        <p class="text-muted text-center mb-5">
+          Choose what you want and we dilever it to you
+        </p>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 mb-grid-gutter">
+            <a class="card border-0 shadow" href="food-delivery-category.html"
+              ><img
+                class="card-img-top"
+                src="img/01.jpg"
+                alt="Burgers &amp; Fries"
+              />
+              <div class="card-body py-4 text-center">
+                <h3 class="h5 mt-1">Burgers &amp; Fries</h3>
+              </div></a
+            >
+          </div>
+          <div class="col-md-4 col-sm-6 mb-grid-gutter">
+            <a class="card border-0 shadow" href="food-delivery-category.html"
+              ><img class="card-img-top" src="img/02.jpg" alt="Noodles" />
+              <div class="card-body py-4 text-center">
+                <h3 class="h5 mt-1">Noodles</h3>
+              </div></a
+            >
+          </div>
+          <div class="col-md-4 col-sm-6 mb-grid-gutter">
+            <a class="card border-0 shadow" href="food-delivery-category.html"
+              ><img
+                class="card-img-top"
+                src="img/03.jpg"
+                alt="Sushi &amp; Rolls"
+              />
+              <div class="card-body py-4 text-center">
+                <h3 class="h5 mt-1">Sushi &amp; Rolls</h3>
+              </div></a
+            >
+          </div>
+          <div class="col-md-4 col-sm-6 mb-grid-gutter">
+            <a class="card border-0 shadow" href="food-delivery-category.html"
+              ><img
+                class="card-img-top"
+                src="img/04.jpg"
+                alt="Pizza &amp; Pasta"
+              />
+              <div class="card-body py-4 text-center">
+                <h3 class="h5 mt-1">Pizza &amp; Pasta</h3>
+              </div></a
+            >
+          </div>
+          <div class="col-md-4 col-sm-6 mb-grid-gutter">
+            <a class="card border-0 shadow" href="food-delivery-category.html"
+              ><img
+                class="card-img-top"
+                src="img/05.jpg"
+                alt="Coffee &amp; Desserts"
+              />
+              <div class="card-body py-4 text-center">
+                <h3 class="h5 mt-1">Coffee &amp; Desserts</h3>
+              </div></a
+            >
+          </div>
+          <div class="col-md-4 col-sm-6 mb-grid-gutter">
+            <a class="card border-0 shadow" href="food-delivery-category.html"
+              ><img
+                class="card-img-top"
+                src="img/06.jpg"
+                alt="Healthy &amp; Food"
+              />
+              <div class="card-body py-4 text-center">
+                <h3 class="h5 mt-1">Healthy &amp; Food</h3>
+              </div></a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- Mobile Seccion -->
+      <section
+        class="bg-primary bg-size-cover bg-position-center pt-5"
+        style="background-image: url(img/food-delivery/mobile-app-bg.jpg)"
+      >
+        <div class="container pt-2 pt-sm-0">
+          <div class="row align-items-center">
+            <div
+              class="col-xl-4 col-lg-5 col-sm-6 offset-xl-2 offset-lg-1 mt-md-n5 text-center text-sm-start"
+            >
+              <h2 class="text-light mb-3">
+                Order food on the go with Cartzilla App
+              </h2>
+              <p
+                class="text-light opacity-70 mb-0 d-block d-sm-none d-md-block"
+              >
+                Pay with in app wallet, collect loyalty points, track your
+                orders in real time and much more.
+              </p>
+              <div class="mt-4 pt-2">
+                <a class="btn-market btn-apple me-3 mb-2" href="#" role="button"
+                  ><span class="btn-market-subtitle">Download on the</span
+                  ><span class="btn-market-title">App Store</span></a
+                ><a class="btn-market btn-google mb-2" href="#" role="button"
+                  ><span class="btn-market-subtitle">Download on the</span
+                  ><span class="btn-market-title">Google Play</span></a
+                >
+              </div>
+            </div>
+            <div class="col-lg-5 col-sm-6 offset-lg-1 pt-5 pt-sm-3">
+              <img
+                class="d-block mx-auto mx-sm-0"
+                src="img/phone.png"
+                width="331"
+                alt="Mobile App Screen"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Become Courier / Partner CTA-->
+      <section class=""></section>
+      <!-- Popular restaurants logo grid-->
+      <section class=""></section>
+      <!-- Reviews-->
+      <section class=""></section>
+    </main>
+    <!-- Footer -->
+    <footer></footer>
+    <script src="https://kit.fontawesome.com" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"
+      integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>

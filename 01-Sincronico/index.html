@@ -1,29 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
     <title>Tablas y CSS</title>
-</head>
-<body>
-    <header>
-        <h2>Programación INA - PagWeb(HTML/CSS/JS)</h2>
+  </head>
+  <body>
+    <header class="container-fluid bg-body-tertiary">
+      <div class="navbar text-center">
+        <nav>
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Progamacion Web</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >Sincronico</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#" class="dropdown-item">CLASE 01</a>
+                  <ul>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="02-13-2023 Clase01/PagWeb1/index.html"
+                        >PagWeb1</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="02-13-2023 Clase01/PagWeb2/index.html"
+                        >PagWeb2</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="dropdown-item">CLASE 02</a>
+                  <ul>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="02-14-2023 Clase02/index.html"
+                        >PagWeb1</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="02-14-2023 Clase02/interno.html"
+                        >PagWeb2</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="02-15-2023 Clase03/index.html" class="dropdown-item"
+                    >CLASE 03</a
+                  >
+                </li>
+                <li>
+                  <a href="02-20-2023 Clase04/index.html" class="dropdown-item"
+                    >CLASE 04</a
+                  >
+                </li>
+                <li>
+                  <a href="02-21-2023 Clase05/index.html" class="dropdown-item"
+                    >CLASE 05</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="02-22-2023 BootsTrap/Index.html"
+                    class="dropdown-item"
+                    >CLASE 06</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="02-23-2023 Bootstrap2/index.html"
+                    class="dropdown-item"
+                    >CLASE 07</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >Asincronico</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="02-13-2023 Clase01/PagWeb1/index.html"
+                    >PagWeb1</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="02-13-2023 Clase01/PagWeb2/index.html"
+                    >PagWeb2</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >Extras</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="02-13-2023 Clase01/PagWeb1/index.html"
+                    >PagWeb1</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="02-13-2023 Clase01/PagWeb2/index.html"
+                    >PagWeb2</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <h2 class="navbar-brand">Programación INA - PagWeb(HTML/CSS/JS)</h2>
+      </div>
     </header>
-    <nav>
-        <caption>Sincronico</caption>
-        <ul>
-            <li>Clase 02-13</li>
-            <ul>
-                <li><a href="02-13-2023/PagWeb1/index.html">PagWeb1</a></li>
-                <li><a href="02-13-2023/PagWeb2/index.html">PagWeb2</a></li>
-            </ul>
-            <li><a href="02-14-2023 Clase02/index.html">Clase 02-14</a></li>
-            <li><a href="02-15-2023 Clase03/index.html">Clase 02-15</a></li>
-        </ul>
-    </nav>
-    <section></section>
-    <aside></aside>
-    <footer></footer>
-</body>
+    <main></main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

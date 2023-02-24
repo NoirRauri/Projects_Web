@@ -1,35 +1,57 @@
-.home{
-    color: tomato !important;
+.home {
+  color: tomato !important;
 }
 
-.bgimg{
-    background-image: url('../img/intro-hero.jpg');
+.bgimg {
+  background-image: url("../img/intro-hero.jpg");
 }
 
 .navbar-light .navbar-toggler {
-    border: none;
+  border: none;
 }
 
 .btn-primary.btn-shadow {
-    border-radius: .2rem;
-    box-shadow: 0 .5rem 1.25rem -.5rem red;
+  border-radius: 0.2rem;
+  box-shadow: 0 0.5rem 1.25rem -0.5rem red;
 }
 
-.btn-primary{ 
-    background-color: tomato;
-    border: none;
+.btn-primary {
+  background-color: tomato;
+  border: none;
 }
 
-.btn-primary:hover{
-    background-color: red;
-    border: red;
+.btn-primary:hover {
+  background-color: red;
+  border: red;
 }
 
-.product-thumb img{
-    display: block;
-    width: 100%;
+.product-thumb img {
+  display: block;
+  width: 100%;
 }
 
-.product-cart-alt{
-    border-radius: none;
+.product-cart-alt {
+  border: 0;
+}
+
+.product-card-alt .product-thumb {
+  position: relative;
+  border-radius: 0.4375rem;
+  overflow: hidden;
+}
+
+.product-card-alt .product-card-actions {
+  position: absolute;
+  transition: all 0.15s ease-in-out;
+  opacity: 0;
+}
+
+.product-card-alt .product-card-actions {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 5;
+  visibility: hidden;
 }

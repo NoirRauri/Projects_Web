@@ -1,0 +1,45 @@
+Angular comandos
+
+inslalacion de angular
+	1. npm install -g @angular/cli 
+		the execution of PowerShell	
+			1.2- Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+creacion de carpeta
+	2. ng new my-app 'en carpeta raiz'
+ingresar a la carpeta
+	3. cd my-app
+encender el servidor
+	4. ng serve --open 'en carpeta raiz'
+apagar el servidor
+	5. Ctrl+c 'en carpeta raiz'
+
+crear un modulo
+	ng g m ruta/nameFile -m=app --route
+crear un componente
+	ng g c ruta/nameFile --skip-tests
+
+instalar packeteria de nodeModule de un repositorio descargado
+	npm i
+	
+
+Asincronico 01-03-2023
+
+    1- crear proyecto rickand morty
+
+    2- instalar angular material
+
+    2- crear module de angular material
+
+    4- crear modulo de personajes
+
+    5- crear header con menu
+
+    6- crear footer con menu
+
+    7- dar formato al app componet principal con el header y footer creados
+
+    8- crear un servicio de personajes
+    un metodo get
+    recuerde la inyection de http
+
+    https://rickandmortyapi.com/

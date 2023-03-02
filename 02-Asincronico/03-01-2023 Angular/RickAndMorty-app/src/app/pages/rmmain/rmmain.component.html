@@ -1,3 +1,10 @@
+<!-- < mat-grid-list  cols = "2"  rowHeight = "2:1" > 
+  < mat-grid-tile > 1 </ mat-grid-tile > 
+  < mat-grid-tile > 2 </ mat-grid-tile > 
+  < mat-grid-tile > 3 </ mat-grid-tile > 
+  < mat-grid-tile > 4 </ mat- grid-tile > 
+</ mat-grid-list > -->
+
 <mat-card class="example-card">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
@@ -21,3 +28,64 @@
     <button mat-button>SHARE</button>
   </mat-card-actions>
 </mat-card>
+
+<button mat-raised-button color="primary" (click)="next()">Primary</button>
+<button mat-raised-button color="primary" (click)="preview()">Primary</button>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+    <!-- id Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>id</th>
+      <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+    </ng-container>
+
+    <!-- name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <!-- status Column -->
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef>status</th>
+      <td mat-cell *matCellDef="let element">{{ element.status }}</td>
+    </ng-container>
+
+    <!-- species Column -->
+    <ng-container matColumnDef="species">
+      <th mat-header-cell *matHeaderCellDef>species</th>
+      <td mat-cell *matCellDef="let element">{{ element.species }}</td>
+    </ng-container>
+
+    <!-- gender Column -->
+    <ng-container matColumnDef="gender">
+      <th mat-header-cell *matHeaderCellDef>gender</th>
+      <td mat-cell *matCellDef="let element">{{ element.gender }}</td>
+    </ng-container>
+
+    <!-- image Column -->
+    <ng-container matColumnDef="image">
+      <th mat-header-cell *matHeaderCellDef>image</th>
+      <td mat-cell *matCellDef="let element">
+        <img src="{{ element.image }}" alt="" />
+      </td>
+    </ng-container>
+
+    <!-- created Column -->
+    <ng-container matColumnDef="created">
+      <th mat-header-cell *matHeaderCellDef>Date create</th>
+      <td mat-cell *matCellDef="let element">{{ element.created }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <mat-paginator
+    [pageSizeOptions]="[5, 10, 20]"
+    showFirstLastButtons
+    aria-label="Select page of periodic elements"
+  >
+  </mat-paginator>
+</div>

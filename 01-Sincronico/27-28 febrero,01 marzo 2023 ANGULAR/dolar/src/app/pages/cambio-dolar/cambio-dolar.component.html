@@ -1,0 +1,25 @@
+<p>TIPO DE CAMBIO</p>
+<br />
+<button mat-raised-button>Basic</button>
+<button mat-raised-button color="primary">Primary</button>
+<button mat-raised-button color="accent">Accent</button>
+<button mat-raised-button color="warn">Warn</button>
+<br />
+Compra: {{ datoCambio.compra.valor }} Venta: {{ datoCambio.venta.valor }}
+<br />
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Small</mat-card-subtitle>
+      <img
+        mat-card-sm-image
+        src="https://www.eleconomista.net/export/sites/prensagrafica/img/2022/05/24/dinero_shell.jpg_278404476.jpg"
+      />
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    Compra: {{ datoCambio.compra.valor }} <br />
+    Venta: {{ datoCambio.venta.valor }}
+  </mat-card-content>
+</mat-card>

@@ -1,11 +1,23 @@
-<p>location works!</p>
-
-<button mat-raised-button color="primary" (click)="preview()" *ngIf="info.prev">
-  prev
-</button>
-<button mat-raised-button color="primary" (click)="next()" *ngIf="info.next">
-  next
-</button>
+<div class="btnPN">
+  <div>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="preview()"
+      *ngIf="info.prev"
+    >
+      Prev
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="next()"
+      *ngIf="info.next"
+    >
+      Next
+    </button>
+  </div>
+</div>
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <!--- Note that these columns can be defined in any order.

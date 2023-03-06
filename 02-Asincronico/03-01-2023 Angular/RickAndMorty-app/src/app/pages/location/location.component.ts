@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
 import { InfoModel } from 'src/app/shared/models/infoModel';
 import { LocationCardService } from 'src/app/shared/services/Location-card.service';
 
@@ -8,6 +9,8 @@ import { LocationCardService } from 'src/app/shared/services/Location-card.servi
   styleUrls: ['./location.component.css'],
 })
 export class LocationComponent implements OnInit, AfterViewInit {
+  //
+
   info: InfoModel;
   displayedColumns: string[] = [
     'id',
@@ -19,22 +22,23 @@ export class LocationComponent implements OnInit, AfterViewInit {
   ];
   dataSource = [];
 
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
   constructor(private locationSrv: LocationCardService) {}
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
 
   getLocation(url: string) {
-    this.locationSrv.getLocation().subscribe((data: any) => {
+    this.locationSrv.getLocation(url).subscribe((data: any) => {
       const { info, results } = data;
       this.dataSource = results;
       this.info = info;
       console.log(this.dataSource);
     });
   }
-  ngOninit(): void {
+
+  ngOnInit(): void {
     this.getLocation('https://rickandmortyapi.com/api/location');
   }
+
   next(): void {
     this.getLocation(this.info.next);
   }

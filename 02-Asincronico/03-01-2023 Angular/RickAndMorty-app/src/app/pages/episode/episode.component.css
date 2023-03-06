@@ -1,0 +1,11 @@
+.btnPN {
+  height: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.btnPN div {
+  width: auto;
+  margin: 0 auto;
+}

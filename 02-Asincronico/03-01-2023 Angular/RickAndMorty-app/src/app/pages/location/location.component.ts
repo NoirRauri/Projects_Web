@@ -1,5 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
+import { Component, OnInit } from '@angular/core';
 import { InfoModel } from 'src/app/shared/models/infoModel';
 import { LocationCardService } from 'src/app/shared/services/Location-card.service';
 
@@ -8,10 +7,9 @@ import { LocationCardService } from 'src/app/shared/services/Location-card.servi
   templateUrl: './location.component.html',
   styleUrls: ['./location.component.css'],
 })
-export class LocationComponent implements OnInit, AfterViewInit {
-  //
-
+export class LocationComponent implements OnInit {
   info: InfoModel;
+
   displayedColumns: string[] = [
     'id',
     'name',
@@ -21,8 +19,6 @@ export class LocationComponent implements OnInit, AfterViewInit {
     'created',
   ];
   dataSource = [];
-
-  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(private locationSrv: LocationCardService) {}
 
@@ -42,11 +38,8 @@ export class LocationComponent implements OnInit, AfterViewInit {
   next(): void {
     this.getLocation(this.info.next);
   }
+
   preview(): void {
     this.getLocation(this.info.prev);
-  }
-
-  ngAfterViewInit() {
-    // this.dataSource.paginator = this.paginator;
   }
 }

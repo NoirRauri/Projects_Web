@@ -29,8 +29,22 @@
   </mat-card-actions>
 </mat-card>
 
-<button mat-raised-button color="primary" (click)="next()">Primary</button>
-<button mat-raised-button color="primary" (click)="preview()">Primary</button>
+<button
+  mat-raised-button
+  color="primary"
+  (click)="preview()"
+  *ngIf="info.prev == null"
+>
+  Primary
+</button>
+<button
+  mat-raised-button
+  color="primary"
+  (click)="next()"
+  *ngIf="info.next == null"
+>
+  Primary
+</button>
 
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource">

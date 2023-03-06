@@ -1,16 +1,11 @@
 <div>
   <mat-toolbar>
-    <button
-      mat-icon-button
-      class="example-icon"
-      aria-label="Example icon-button with menu icon"
-    >
-      <mat-icon>menu</mat-icon>
+    <button mat-button [matMenuTriggerFor]="aboveMenu">
+      Rick & Morty about
     </button>
-    <button mat-button [matMenuTriggerFor]="aboveMenu">Main</button>
     <mat-menu #aboveMenu="matMenu" yPosition="above">
-      <button mat-menu-item routerLink="RMmain">Rick and Morty</button>
-      <button mat-menu-item routerLink="Location">location</button>
+      <button mat-menu-item routerLink="RMmain">Characters</button>
+      <button mat-menu-item routerLink="Location">Locations</button>
     </mat-menu>
     <span class="example-spacer"></span>
     <button

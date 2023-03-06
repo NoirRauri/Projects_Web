@@ -1,3 +1,15 @@
+.btnPN {
+  height: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.btnPN div {
+  width: auto;
+  margin: 0 auto;
+}
+
 .example-card {
   max-width: 400px;
 }
@@ -11,6 +23,6 @@ table {
   width: 100%;
 }
 
-img{
+img {
   max-width: 100px;
 }

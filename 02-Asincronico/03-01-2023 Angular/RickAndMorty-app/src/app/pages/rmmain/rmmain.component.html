@@ -28,13 +28,26 @@
     <button mat-button>SHARE</button>
   </mat-card-actions>
 </mat-card> -->
-
-<button mat-raised-button color="primary" (click)="preview()" *ngIf="info.prev">
-  Prev
-</button>
-<button mat-raised-button color="primary" (click)="next()" *ngIf="info.next">
-  Next
-</button>
+<div class="btnPN">
+  <div>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="preview()"
+      *ngIf="info.prev"
+    >
+      Prev
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="next()"
+      *ngIf="info.next"
+    >
+      Next
+    </button>
+  </div>
+</div>
 
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource">

@@ -7,8 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class CharacterCardService {
   constructor(private http: HttpClient) {}
-  getPersonajes(url?: string): Observable<any> {
-    url == null ? 'https://rickandmortyapi.com/api/character' : url;
-    return this.http.get('https://rickandmortyapi.com/api/character');
+  getPersonajes(url: string): Observable<any> {
+    return this.http.get(url);
   }
 }

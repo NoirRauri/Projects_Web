@@ -29,21 +29,11 @@
   </mat-card-actions>
 </mat-card>
 
-<button
-  mat-raised-button
-  color="primary"
-  (click)="preview()"
-  *ngIf="info.prev == null"
->
-  Primary
+<button mat-raised-button color="primary" (click)="preview()" *ngIf="info.prev">
+  Prev
 </button>
-<button
-  mat-raised-button
-  color="primary"
-  (click)="next()"
-  *ngIf="info.next == null"
->
-  Primary
+<button mat-raised-button color="primary" (click)="next()" *ngIf="info.next">
+  Next
 </button>
 
 <div class="mat-elevation-z8">

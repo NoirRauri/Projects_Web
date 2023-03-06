@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { CharacterModel } from 'src/app/shared/models/characterModel';
 import { CharacterCardService } from 'src/app/shared/services/character-card.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { InfoModel } from 'src/app/shared/models/infoModel';
@@ -27,6 +26,18 @@ export class RmmainComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(private personjesSrv: CharacterCardService) {}
+
+  getPersonajes(url: string) {
+    this.personjesSrv.getPersonajes(url).subscribe((data: any) => {
+      // console.log(data)
+      const { info, results } = data;
+      this.dataSource = results;
+      this.info = info;
+      // this.lista=[...this.lista,results]
+      console.log(this.dataSource);
+    });
+  }
+
   ngOnInit(): void {
     this.getPersonajes('https://rickandmortyapi.com/api/character');
   }
@@ -36,17 +47,6 @@ export class RmmainComponent implements OnInit, AfterViewInit {
   }
   preview(): void {
     this.getPersonajes(this.info.prev);
-  }
-
-  getPersonajes(url: string) {
-    this.personjesSrv.getPersonajes().subscribe((data: any) => {
-      // console.log(data)
-      const { info, results } = data;
-      this.dataSource = results;
-      this.info = info;
-      // this.lista=[...this.lista,results]
-      console.log(this.dataSource);
-    });
   }
 
   ngAfterViewInit() {

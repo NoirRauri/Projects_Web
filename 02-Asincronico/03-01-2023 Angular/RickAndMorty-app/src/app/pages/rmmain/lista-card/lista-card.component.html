@@ -1,0 +1,36 @@
+<p>lista-card works!</p>
+
+<div class="btnPN">
+    <div>
+        <button mat-raised-button color="primary" (click)="preview()" *ngIf?="info.prev">
+            Prev
+        </button>
+        <button mat-raised-button color="primary" (click)="next()" *ngIf?="info.next">
+            Next
+        </button>
+    </div>
+</div>
+
+<div class="row px-5">
+    <div class="col col-xs-12 col-sm-6 col-md-3 py-2" *ngFor="let per of lista">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <!-- <mat-card-title>{{per.name}}</mat-card-title> -->
+                <mat-card-subtitle> {{per.status}} </mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="{{per.image}}" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+                <p class="mt-2 text-light">
+                    Epecie: {{per.species}} <br>
+                    Genero: {{per.gender}} <br>
+                    <!-- pipes angular | TypeDate:'' -->
+                    Fecha creación: {{per.created | date:'short'}}
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button [routerLink]="['/RMmain/detalle',per.id]">Detalle</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

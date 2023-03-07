@@ -20,6 +20,7 @@ export class RmmainComponent implements OnInit, AfterViewInit {
     'gender',
     'image',
     'created',
+    'detalle',
   ];
   dataSource = [];
 

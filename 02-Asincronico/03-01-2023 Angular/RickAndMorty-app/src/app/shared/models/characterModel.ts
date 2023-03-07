@@ -6,4 +6,5 @@ export interface CharacterModel {
   gender: string;
   image: string;
   created: Date;
+  detalle: string;
 }

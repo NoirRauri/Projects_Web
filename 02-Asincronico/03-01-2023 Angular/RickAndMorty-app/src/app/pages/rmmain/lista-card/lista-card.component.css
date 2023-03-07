@@ -1,0 +1,20 @@
+.btnPN {
+  height: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.btnPN div {
+  width: auto;
+  margin: 0 auto;
+}
+
+.example-card {
+  max-width: auto;
+}
+
+.example-header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}

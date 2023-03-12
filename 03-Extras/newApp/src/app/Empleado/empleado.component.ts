@@ -1,0 +1,29 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-empleado',
+  templateUrl: './empleado.component.html',
+  styleUrls: ['./empleado.component.css'],
+  // inline
+  // template: '<p>empleado works!</p>',
+  // styles: ['p{background-color: aqua;}'],
+})
+export class EmpleadoComponent implements OnInit {
+  nombre = 'Juan';
+  apellido = 'Diaz';
+  edad = 28;
+
+  // empresa = 'Pildoras imformaticas';
+
+  // getEdad() {
+  //   return this.edad;
+  // }
+
+  // llamaEmpresa(value: string) {}
+
+  constructor() {}
+
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
+}

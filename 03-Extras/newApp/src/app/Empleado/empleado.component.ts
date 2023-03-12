@@ -17,8 +17,20 @@ export class EmpleadoComponent implements OnInit {
 
   userRegister = false;
 
-  getRegisterUser() {
-    this.userRegister = true;
+  textoRegistro = 'No hay nadie registrado';
+
+  getUserRegister() {
+    this.userRegister = false;
+  }
+
+  setUserRegister(event: Event) {
+    // alert('El usuario se acaba de registrar');
+    // this.textoRegistro = 'El usuario se acaba';
+    if ((<HTMLInputElement>event.target).value == "si") {
+      this.textoRegistro = 'El usuario se acaba';
+    } else {
+      this.textoRegistro = 'No hay nadie registrado';
+    }
   }
 
   // empresa = 'Pildoras imformaticas';
@@ -29,7 +41,7 @@ export class EmpleadoComponent implements OnInit {
 
   // llamaEmpresa(value: string) {}
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
     throw new Error('Method not implemented.');

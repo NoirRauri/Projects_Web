@@ -4,9 +4,9 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-empleado',
   templateUrl: './empleado.component.html',
   styleUrls: ['./empleado.component.css'],
-  // inline
-  // template: '<p>empleado works!</p>',
-  // styles: ['p{background-color: aqua;}'],
+  /*   // inline
+    template: '<p>empleado works!</p>',
+    styles: ['p{background-color: aqua;}'], */
 })
 export class EmpleadoComponent implements OnInit {
   nombre = 'Juan';
@@ -14,9 +14,9 @@ export class EmpleadoComponent implements OnInit {
   edad = 28;
   empresa = 'Rauri yhorel';
 
-  // cambioEmpresa(event: Event) {
-  //   this.empresa = (<HTMLInputElement>event.target).value;
-  // }
+  /* cambioEmpresa(event: Event) {
+    this.empresa = (<HTMLInputElement>event.target).value;
+  } */
 
   habilitacionCuadro = true;
 
@@ -29,8 +29,8 @@ export class EmpleadoComponent implements OnInit {
   }
 
   setUserRegister(event: Event) {
-    // alert('El usuario se acaba de registrar');
-    // this.textoRegistro = 'El usuario se acaba';
+    /*     alert('El usuario se acaba de registrar');
+        this.textoRegistro = 'El usuario se acaba'; */
     if ((<HTMLInputElement>event.target).value == "si") {
       this.textoRegistro = 'El usuario se acaba';
     } else {
@@ -38,13 +38,13 @@ export class EmpleadoComponent implements OnInit {
     }
   }
 
-  // empresa = 'Pildoras imformaticas';
-
-  // getEdad() {
-  //   return this.edad;
-  // }
-
-  // llamaEmpresa(value: string) {}
+  /*   empresa = 'Pildoras imformaticas';
+  
+    getEdad() {
+      return this.edad;
+    }
+  
+    llamaEmpresa(value: string) {} */
 
   constructor() { }
 

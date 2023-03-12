@@ -13,6 +13,14 @@ export class EmpleadoComponent implements OnInit {
   apellido = 'Diaz';
   edad = 28;
 
+  habilitacionCuadro = true;
+
+  userRegister = false;
+
+  getRegisterUser() {
+    this.userRegister = true;
+  }
+
   // empresa = 'Pildoras imformaticas';
 
   // getEdad() {

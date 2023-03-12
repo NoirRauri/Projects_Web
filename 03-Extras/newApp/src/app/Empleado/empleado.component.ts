@@ -12,6 +12,11 @@ export class EmpleadoComponent implements OnInit {
   nombre = 'Juan';
   apellido = 'Diaz';
   edad = 28;
+  empresa = 'Rauri yhorel';
+
+  // cambioEmpresa(event: Event) {
+  //   this.empresa = (<HTMLInputElement>event.target).value;
+  // }
 
   habilitacionCuadro = true;
 

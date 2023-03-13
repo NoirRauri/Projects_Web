@@ -20,7 +20,7 @@ export class EpisodeComponent implements OnInit {
   ];
   dataSource = [];
 
-  constructor(private episodeSrv: EpisodeTableService) {}
+  constructor(private episodeSrv: EpisodeTableService) { }
 
   getEpisode(url: string) {
     this.episodeSrv.getEpisode(url).subscribe((data: any) => {

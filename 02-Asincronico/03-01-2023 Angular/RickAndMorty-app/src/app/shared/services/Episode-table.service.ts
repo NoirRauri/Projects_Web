@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class EpisodeTableService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
   getEpisode(url: string): Observable<any> {
     return this.http.get(url);
   }

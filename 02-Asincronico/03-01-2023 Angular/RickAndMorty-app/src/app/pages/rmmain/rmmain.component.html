@@ -88,9 +88,9 @@
 
     <!-- created Column -->
     <ng-container matColumnDef="detalle">
-      <th mat-header-cell *matHeaderCellDef>Action/th>
+      <th mat-header-cell *matHeaderCellDef>Detail</th>
       <td mat-cell *matCellDef="let element">
-        <BUtton>Detalle</BUtton>
+        <button mat-button [routerLink]="['/RMmain/detalle',element.id]">Detalle</button>
       </td>
     </ng-container>
 

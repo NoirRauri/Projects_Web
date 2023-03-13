@@ -17,10 +17,11 @@ export class LocationComponent implements OnInit {
     'dimension',
     'url',
     'created',
+    'detail'
   ];
   dataSource = [];
 
-  constructor(private locationSrv: LocationCardService) {}
+  constructor(private locationSrv: LocationCardService) { }
 
   getLocation(url: string) {
     this.locationSrv.getLocation(url).subscribe((data: any) => {

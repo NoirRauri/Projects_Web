@@ -2,6 +2,7 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { CharacterCardService } from 'src/app/shared/services/character-card.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { InfoModel } from 'src/app/shared/models/infoModel';
+import { CharacterModel } from 'src/app/shared/models/characterModel';
 
 @Component({
   selector: 'app-rmmain',
@@ -9,9 +10,7 @@ import { InfoModel } from 'src/app/shared/models/infoModel';
   styleUrls: ['./rmmain.component.css'],
 })
 export class RmmainComponent implements OnInit, AfterViewInit {
-  // lista:CharacterModel[]=[]
 
-  info: InfoModel;
   displayedColumns: string[] = [
     'id',
     'name',
@@ -23,18 +22,21 @@ export class RmmainComponent implements OnInit, AfterViewInit {
     'detalle',
   ];
   dataSource = [];
+  info: InfoModel;
+  // lista: CharacterModel[] = [];
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private personjesSrv: CharacterCardService) {}
+  constructor(private personajesSrv: CharacterCardService) { }
 
   getPersonajes(url: string) {
-    this.personjesSrv.getPersonajes(url).subscribe((data: any) => {
+    this.personajesSrv.getPersonajes(url).subscribe((data: any) => {
+      // this.lista = [];
       // console.log(data)
       const { info, results } = data;
       this.dataSource = results;
       this.info = info;
-      // this.lista=[...this.lista,results]
+      // this.lista = [...this.lista, results]
       console.log(this.dataSource);
     });
   }

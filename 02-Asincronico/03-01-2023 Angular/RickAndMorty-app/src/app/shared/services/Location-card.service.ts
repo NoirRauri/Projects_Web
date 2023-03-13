@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class LocationCardService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
   getLocation(url: string): Observable<any> {
     return this.http.get(url);
   }

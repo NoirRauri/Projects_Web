@@ -11,7 +11,7 @@ import { NavComponent } from './shared/component/nav/nav.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent,NavComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -22,4 +22,4 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

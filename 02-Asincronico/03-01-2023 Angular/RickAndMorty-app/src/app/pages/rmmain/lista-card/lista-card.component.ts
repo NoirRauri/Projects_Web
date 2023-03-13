@@ -11,7 +11,7 @@ import { CharacterCardService } from 'src/app/shared/services/character-card.ser
 export class ListaCardComponent {
   lista: CharacterModel[] = [];
   info: InfoModel;
-  constructor(private personjesSrv: CharacterCardService) {}
+  constructor(private personajesSrv: CharacterCardService) { }
 
   ngOnInit(): void {
     this.getPersonajes('https://rickandmortyapi.com/api/character');
@@ -29,11 +29,12 @@ export class ListaCardComponent {
   }
 
   getPersonajes(url: string) {
-    this.personjesSrv.getPersonajes(url).subscribe((data: any) => {
+    this.personajesSrv.getPersonajes(url).subscribe((data: any) => {
       this.lista = [];
       const { info, results } = data;
       this.lista = [...this.lista, ...results];
       this.info = info;
+      console.log(this.info)
     });
   }
 }

@@ -11,4 +11,4 @@ import { ListaCardComponent } from './lista-card/lista-card.component';
   declarations: [RmmainComponent, DetallePersonajesComponent, ListaCardComponent],
   imports: [CommonModule, RmmainRoutingModule, MaterialModule],
 })
-export class RmmainModule {}
+export class RmmainModule { }

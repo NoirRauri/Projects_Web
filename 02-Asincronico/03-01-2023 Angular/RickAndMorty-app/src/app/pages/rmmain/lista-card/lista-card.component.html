@@ -1,4 +1,5 @@
-<p>lista-card works!</p>
+<br>
+<p class="display-4 text-center fw-light">lista-card</p>
 
 <div class="btnPN">
     <div>
@@ -11,12 +12,12 @@
     </div>
 </div>
 
-<div class="row px-5">
-    <div class="col col-xs-12 col-sm-6 col-md-3 py-2" *ngFor="let per of lista">
+<div class="row px-5 mx-5">
+    <div class="col col-xs-12 col-sm-6 col-md-4 py-2" *ngFor="let per of lista">
         <mat-card class="example-card">
             <mat-card-header>
                 <div mat-card-avatar class="example-header-image"></div>
-                <!-- <mat-card-title>{{per.name}}</mat-card-title> -->
+                <mat-card-title>{{per.name}}</mat-card-title>
                 <mat-card-subtitle> {{per.status}} </mat-card-subtitle>
             </mat-card-header>
             <img mat-card-image src="{{per.image}}" alt="Photo of a Shiba Inu">

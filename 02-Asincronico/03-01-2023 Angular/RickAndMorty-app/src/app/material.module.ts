@@ -23,4 +23,4 @@ const myListMaterialModule = [
   imports: [...myListMaterialModule],
   exports: [...myListMaterialModule],
 })
-export class MaterialModule {}
+export class MaterialModule { }

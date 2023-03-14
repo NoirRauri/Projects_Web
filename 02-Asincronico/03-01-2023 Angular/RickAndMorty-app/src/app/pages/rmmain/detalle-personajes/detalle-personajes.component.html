@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-12" *ngIf="personaje.id">
+    <div class="col-12" *ngIf="personaje?.id">
         <div class="card" style="width: 18rem;">
             <img src="{{ personaje.image}}" class="card-img-top" alt="...">
             <div class="card-body">
@@ -25,7 +25,7 @@
                 <th>Details</th>
             </thead>
             <tbody>
-                <tr *ngFor="let perEpi of personaje.episode;">
+                <tr *ngFor="let perEpi of personaje?.episode;">
                     <td>{{perEpi}}</td>
                     <td><button class="btn btn-dark" [routerLink]="['/Episode/detalleEpisode',perEpi]">Detalle</button>
                     </td>

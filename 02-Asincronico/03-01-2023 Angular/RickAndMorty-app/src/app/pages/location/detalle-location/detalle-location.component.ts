@@ -33,7 +33,6 @@ export class DetalleLocationComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 
 }

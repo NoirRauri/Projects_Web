@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { EpisodeModel } from 'src/app/shared/models/episodeModel';
 import { EpisodeTableService } from 'src/app/shared/services/Episode-table.service';
@@ -8,16 +8,8 @@ import { EpisodeTableService } from 'src/app/shared/services/Episode-table.servi
   templateUrl: './detalle-episode.component.html',
   styleUrls: ['./detalle-episode.component.css']
 })
-export class DetalleEpisodeComponent {
+export class DetalleEpisodeComponent implements OnInit {
 
-  displayedColumns: string[] = [
-    'id',
-    'name',
-    'air_date',
-    'episode',
-    'url',
-    'created'
-  ];
   dataSource = []
 
   episode: EpisodeModel;
@@ -32,7 +24,6 @@ export class DetalleEpisodeComponent {
   }
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 
 

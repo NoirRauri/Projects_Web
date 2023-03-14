@@ -15,16 +15,20 @@
             </div>
         </div>
     </div>
-
     <div class="col-12">
-        <table>
+        <h2 class="text-center"> Episodios donde se encuentra</h2>
+    </div>
+    <div class="col-12">
+        <table class="table table-striped" style="width: 500px;">
             <thead>
-                <th>Name</th>
-                <th>Index</th>
+                <th>Episode link</th>
+                <th>Details</th>
             </thead>
             <tbody>
-                <tr *ngFor="let per of personaje.episode;">
-                    <td>{{per}}</td>
+                <tr *ngFor="let perEpi of personaje.episode;">
+                    <td>{{perEpi}}</td>
+                    <td><button class="btn btn-dark" [routerLink]="['/Episode/detalleEpisode',perEpi]">Detalle</button>
+                    </td>
                 </tr>
             </tbody>
         </table>

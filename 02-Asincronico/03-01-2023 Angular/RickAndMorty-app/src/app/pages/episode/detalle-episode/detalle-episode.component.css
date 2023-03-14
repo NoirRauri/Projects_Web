@@ -8,10 +8,11 @@ ul {
   display: flex;
   width: 100%;
   height: 100%;
-  align-items: center;
+  align-items: start;
 }
 
 .row .col-12 {
   display: flex;
   justify-content: center;
+  margin: 40px 0;
 }

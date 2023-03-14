@@ -16,6 +16,20 @@
         </div>
     </div>
 
+    <div class="col-12">
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Index</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let per of personaje.episode;">
+                    <td>{{per}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
     <!-- <div class="col-12">
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 

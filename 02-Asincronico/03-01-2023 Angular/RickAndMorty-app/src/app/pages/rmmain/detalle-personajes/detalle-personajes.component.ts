@@ -10,29 +10,13 @@ import { CharacterCardService } from 'src/app/shared/services/character-card.ser
 })
 export class DetallePersonajesComponent implements OnInit {
 
-  displayedColumns: string[] = [
-    "id",
-    "name",
-    "status",
-    "species",
-    "type",
-    "gender",
-    "image",
-    "episode",
-    "url",
-    "created",
-  ];
-  dataSource = [];
-
   personaje: DetalleCharacterModel;
   constructor(route: ActivatedRoute, srv: CharacterCardService) {
     const id = route.snapshot.paramMap.get('id');
 
     srv.getPersonajeById(id).subscribe((result: any) => {
-      this.dataSource = result;
-      console.log(this.dataSource)
       this.personaje = result;
-      // console.log(this.personaje);
+      console.log(this.personaje);
     });
   }
 

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CharacterModel } from 'src/app/shared/models/characterModel';
 import { DetalleCharacterModel } from 'src/app/shared/models/detalleCharacterModel';
 import { CharacterCardService } from 'src/app/shared/services/character-card.service';
 

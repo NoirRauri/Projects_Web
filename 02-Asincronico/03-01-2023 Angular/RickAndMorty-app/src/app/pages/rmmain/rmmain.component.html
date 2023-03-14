@@ -31,10 +31,10 @@
 
 <div class="btnPN">
   <div>
-    <button mat-raised-button color="primary" (click)="preview()" *ngIf="info.prev">
+    <button mat-raised-button color="primary" (click)="preview()" *ngIf="info?.prev">
       Prev
     </button>
-    <button mat-raised-button color="primary" (click)="next()" *ngIf="info.next">
+    <button mat-raised-button color="primary" (click)="next()" *ngIf="info?.next">
       Next
     </button>
   </div>

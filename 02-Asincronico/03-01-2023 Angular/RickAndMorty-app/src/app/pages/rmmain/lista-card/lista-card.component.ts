@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CharacterModel } from 'src/app/shared/models/characterModel';
 import { InfoModel } from 'src/app/shared/models/infoModel';
 import { CharacterCardService } from 'src/app/shared/services/character-card.service';
@@ -8,7 +8,7 @@ import { CharacterCardService } from 'src/app/shared/services/character-card.ser
   templateUrl: './lista-card.component.html',
   styleUrls: ['./lista-card.component.css'],
 })
-export class ListaCardComponent {
+export class ListaCardComponent implements OnInit {
   lista: CharacterModel[] = [];
   info: InfoModel;
   constructor(private personajesSrv: CharacterCardService) { }
@@ -34,7 +34,7 @@ export class ListaCardComponent {
       const { info, results } = data;
       this.lista = [...this.lista, ...results];
       this.info = info;
-      console.log(this.info)
+      // console.log(this.info)
     });
   }
 }

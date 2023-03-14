@@ -1,12 +1,47 @@
 <div class="row">
-    <div class="col">
+    <div class="col-12" *ngIf="personaje.id">
         <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="{{ personaje.image}}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">asdasdadsads</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h2 class="card-title"> {{ personaje.name }} </h2>
+                <ul class="card-text">
+                    <li>Status: {{ personaje.status }}</li>
+                    <li>Specie: {{ personaje.species }} </li>
+                    <li>Type: {{ personaje.type }} </li>
+                    <li>Gender: {{ personaje.gender }} </li>
+                    <li>Date: {{ personaje.created | date:'short' }} </li>
+                    <li>Date: {{ personaje.episode }} </li>
+                </ul>
             </div>
         </div>
+    </div>
+    <div class="col-12">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <!--- Note that these columns can be defined in any order.
+                    The actual rendered columns are set as a property on the row definition" -->
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef>ID</th>
+                <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="episode">
+                <th mat-header-cell *matHeaderCellDef>Episodio</th>
+                <td mat-cell *matCellDef="let element">{{ element.episode }}</td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="detail">
+                <th mat-header-cell *matHeaderCellDef>Detail</th>
+                <td mat-cell *matCellDef="let element">
+                    <button mat-button [routerLink]="['/RMmain/detalle',element.id]">Detalle</button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
     </div>
 </div>

@@ -7,7 +7,9 @@ import { CharacterModel } from '../models/characterModel';
   providedIn: 'root',
 })
 export class CharacterCardService {
-  constructor(private http: HttpClient) {}
+
+  constructor(private http: HttpClient) { }
+
   getPersonajes(url: string): Observable<any> {
     return this.http.get(url);
   }

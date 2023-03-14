@@ -17,6 +17,7 @@ export class EpisodeComponent implements OnInit {
     'episode',
     'url',
     'created',
+    'detail'
   ];
   dataSource = [];
 

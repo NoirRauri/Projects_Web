@@ -16,7 +16,7 @@
     <div class="col col-xs-12 col-sm-6 col-md-4 py-2" *ngFor="let per of lista">
         <mat-card class="example-card">
             <mat-card-header>
-                <div mat-card-avatar class="example-header-image"></div>
+                <div mat-card-avatar style="background-image: url({{per.image}}); background-size: cover;"></div>
                 <mat-card-title>{{per.name}}</mat-card-title>
                 <mat-card-subtitle> {{per.status}} </mat-card-subtitle>
             </mat-card-header>

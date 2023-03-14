@@ -5,8 +5,8 @@ export interface DetalleCharacterModel {
     species: string;
     type: string;
     gender: string;
-    image: string
-    episode: []
+    image: string;
+    episode: [];
     url: string;
     created: Date;
 }

@@ -19,15 +19,26 @@
         <h2 class="text-center"> Episodios donde se encuentra</h2>
     </div>
     <div class="col-12">
-        <table class="table table-striped" style="width: 500px;">
+        <table class="table table-striped" style="width: 600px;">
             <thead>
                 <th>Episode link</th>
-                <th>Details</th>
+                <th>Details(split)</th>
+                <th>Details(Input)</th>
+                <th>Details(Output)</th>
             </thead>
             <tbody>
                 <tr *ngFor="let perEpi of personaje?.episode;">
                     <td>{{perEpi}}</td>
-                    <td><button class="btn btn-dark" [routerLink]="['/Episode/detalleEpisode',perEpi]">Detalle</button>
+                    <td>
+                        <button class="btn btn-dark"
+                            [routerLink]="['/Episode/detalleEpisode',getIdEpisode(perEpi)]">Detalle</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-dark">Detalle</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-dark" (click)="sendEpisode(perEpi)"
+                            [routerLink]="['/Episode/detalleEpisode']">Detalle</button>
                     </td>
                 </tr>
             </tbody>

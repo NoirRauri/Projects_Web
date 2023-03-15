@@ -19,4 +19,5 @@ export class CharacterCardService {
       'https://rickandmortyapi.com/api/character/' + id
     );
   }
+
 }

@@ -15,19 +15,28 @@ export class DetalleEpisodeComponent implements OnInit {
   dataSource = []
   episode: EpisodeModel;
 
-  constructor(route: ActivatedRoute, private srvEpi: EpisodeTableService) {
-    const id = route.snapshot.paramMap.get('id');
+  constructor(private route: ActivatedRoute, private srvEpi: EpisodeTableService) {
 
-    srvEpi.getEpisodeById(id).subscribe((result: any) => {
-      this.dataSource = result;
-      this.episode = result;
-    })
   }
 
   ngOnInit(): void {
-    this.srvEpi.triggerEpisode.subscribe(link => {
-      this.srvEpi.getEpisodeByUrl(link)
-    });
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      this.srvEpi.getEpisodeById(id).subscribe((result: any) => {
+        // this.dataSource = result;
+        this.episode = result;
+      })
+    } else {
+      const url = this.srvEpi.getUrlEpi()
+      console.log(url)
+      this.srvEpi.getEpisodeByUrl(url).subscribe((result: any) => {
+        // this.dataSource = result;
+        this.episode = result;
+      })
+    }
+    // this.srvEpi.triggerEpisode.subscribe(link => {
+    //   this.srvEpi.getEpisodeByUrl(link)
+    // });
   }
 
 

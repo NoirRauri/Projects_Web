@@ -23,8 +23,8 @@
             <thead>
                 <th>Episode link</th>
                 <th>Details(split)</th>
-                <th>Details(Input)</th>
-                <th>Details(Output)</th>
+                <!-- <th>Details(Input)</th> -->
+                <th>Details(Service)</th>
             </thead>
             <tbody>
                 <tr *ngFor="let perEpi of personaje?.episode;">
@@ -33,12 +33,12 @@
                         <button class="btn btn-dark"
                             [routerLink]="['/Episode/detalleEpisode',getIdEpisode(perEpi)]">Detalle</button>
                     </td>
-                    <td>
+                    <!-- <td>
                         <button class="btn btn-dark">Detalle</button>
-                    </td>
+                    </td> -->
                     <td>
-                        <button class="btn btn-dark" (click)="sendEpisode(perEpi)"
-                            [routerLink]="['/Episode/detalleEpisode']">Detalle</button>
+                        <!-- [routerLink]="['/Episode/detalleEpisode']" -->
+                        <button class="btn btn-dark" (click)="sendEpisode(perEpi)">Detalle</button>
                     </td>
                 </tr>
             </tbody>

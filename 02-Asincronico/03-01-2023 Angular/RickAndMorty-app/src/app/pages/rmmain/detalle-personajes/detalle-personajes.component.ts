@@ -1,5 +1,5 @@
 import { Component, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DetalleCharacterModel } from 'src/app/shared/models/detalleCharacterModel';
 import { CharacterCardService } from 'src/app/shared/services/character-card.service';
 import { EpisodeTableService } from 'src/app/shared/services/Episode-table.service';
@@ -14,7 +14,7 @@ export class DetallePersonajesComponent implements OnChanges, OnInit, OnDestroy 
   // @Input() dataEntrante: any;
   personaje: DetalleCharacterModel;
 
-  constructor(route: ActivatedRoute, srv: CharacterCardService, private srvEpi: EpisodeTableService) {
+  constructor(route: ActivatedRoute, srv: CharacterCardService, private srvEpi: EpisodeTableService, private rauter: Router) {
 
     const id = route.snapshot.paramMap.get('id');
 
@@ -45,9 +45,10 @@ export class DetallePersonajesComponent implements OnChanges, OnInit, OnDestroy 
   }
 
   sendEpisode(episode: string) {
-    console.log(episode)
-    this.srvEpi.triggerEpisode.emit(episode);
-    // console.log(this.srvEpi.triggerEpisode.emit(episode))
+    // console.log(episode)
+    this.srvEpi.setUrlEpi(episode);
+    this.rauter.navigate(['/Episode/detalleEpisode']);
+    // this.srvEpi.triggerEpisode.emit(episode);
   }
 
 }

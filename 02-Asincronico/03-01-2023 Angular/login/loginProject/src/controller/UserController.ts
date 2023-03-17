@@ -4,6 +4,7 @@ import { User } from "../entity/User"
 
 export class UserController {
 
+    // viene por default
     private userRepository = AppDataSource.getRepository(User)
 
     async all(request: Request, response: Response, next: NextFunction) {
@@ -12,7 +13,7 @@ export class UserController {
 
     async one(request: Request, response: Response, next: NextFunction) {
         const id = parseInt(request.params.id)
-        
+
 
         const user = await this.userRepository.findOne({
             where: { id }

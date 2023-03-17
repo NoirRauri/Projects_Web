@@ -1,5 +1,6 @@
 import "reflect-metadata"
 import { DataSource } from "typeorm"
+import { Clientes } from "./entity/Clientes"
 import { Productos } from "./entity/Productos"
 import { User } from "./entity/User"
 
@@ -13,7 +14,7 @@ export const AppDataSource = new DataSource({
     synchronize: true,
     logging: false,
     //En entities se agregan las rutas de las entidades
-    entities: [User, Productos],
+    entities: [User, Productos, Clientes],
     migrations: [],
     subscribers: [],
 })

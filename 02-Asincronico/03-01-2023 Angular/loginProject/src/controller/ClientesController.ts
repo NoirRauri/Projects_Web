@@ -11,7 +11,7 @@ class ClientesController {
         const ClientesRepo = AppDataSource.getRepository(Clientes);
 
         // Vericacion de entrada a la BD
-        const listaClientes = await ClientesRepo.find();//amlacena todos los clientes en listaClientes
+        const listaClientes = await ClientesRepo.find({ where: { estado: true } });//amlacena todos los clientes en listaClientes
         if (listaClientes.length > 0) { // si encuantra 1 o mas datos:clientes los muestra
             return res.status(200).json(listaClientes);
         } else { // de lo contrario un msnJson
@@ -29,7 +29,7 @@ class ClientesController {
             return res.status(400).json({ message: 'no se indico id' })
         }
         try { // si lo encuantra manda la respuesta en Json
-            const clientes = await ClientesRepo.findOneOrFail({ where: { cedula: id } })
+            const clientes = await ClientesRepo.findOneOrFail({ where: { cedula: id, estado: true } })
             return res.status(200).json(clientes)
 
         } catch (error) { //si no encuantra el ID manda un msnJson
@@ -50,7 +50,7 @@ class ClientesController {
         let cliente: Clientes; //se agrega la variable dentro del tryCatch para que la puedan acceder todo el metodo
         // un try-catch donde muestra un mensaje en el catch si no encuantra el ID
         try {
-            cliente = await ClientesRepo.findOneOrFail({ where: { cedula: id } })
+            cliente = await ClientesRepo.findOneOrFail({ where: { cedula: id, estado: true } })
         } catch (error) {
             return res.status(400).json({ message: 'no se encontro con el id' })
 

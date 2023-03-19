@@ -11,7 +11,7 @@ class ProductosController {
     const productosRepo = AppDataSource.getRepository(Productos);
 
     // Vericacion de entrada a la BD
-    const listaProduct = await productosRepo.find();//amlacena todos los produtos en listaProduct
+    const listaProduct = await productosRepo.find({ where: { estado: true } });//amlacena todos los produtos en listaProduct
     if (listaProduct.length > 0) { // si encuantra 1 o mas datos:Prodcutos los muestra
       return res.status(200).json(listaProduct);
     } else { // de lo contrario un msnJson
@@ -29,7 +29,7 @@ class ProductosController {
       return res.status(400).json({ message: 'no se indico id' })
     }
     try { // si lo encuantra manda la respuesta en Json
-      const producto = await productosRepo.findOneOrFail({ where: { id } })
+      const producto = await productosRepo.findOneOrFail({ where: { id, estado: true } })
       return res.status(200).json(producto)
 
     } catch (error) { //si no encuantra el ID manda un msnJson
@@ -50,7 +50,7 @@ class ProductosController {
     let producto: Productos; //se agrega la variable duera del tryCatch para que la puedan acceder todo el metodo
     // un try-catch donde muestra un mensaje en el catch si no encuantra el ID
     try {
-      producto = await productosRepo.findOneOrFail({ where: { id } })
+      producto = await productosRepo.findOneOrFail({ where: { id, estado: true } })
     } catch (error) {
       return res.status(400).json({ message: 'no se encontro con el id' })
 

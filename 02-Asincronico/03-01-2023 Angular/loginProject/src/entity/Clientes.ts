@@ -1,5 +1,5 @@
 import { IsDate, IsEmail } from "class-validator"
-import { Column, Entity, PrimaryColumn } from "typeorm"
+import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm"
 
 @Entity()
 export class Clientes {
@@ -20,8 +20,7 @@ export class Clientes {
     @IsEmail()
     email: String
 
-    @Column()
-    @IsDate()
+    @CreateDateColumn()
     fechaNac: Date
 
     @Column()

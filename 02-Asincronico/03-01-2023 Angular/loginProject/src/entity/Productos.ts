@@ -15,7 +15,7 @@ export class Productos {
     @Column()
     precio: number
 
-    @Column()
+    @Column({ default: true })
     estado: boolean
 
 }

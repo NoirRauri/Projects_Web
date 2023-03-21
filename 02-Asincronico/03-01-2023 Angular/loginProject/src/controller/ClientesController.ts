@@ -5,6 +5,7 @@ import { Clientes } from "../entity/Clientes";
 
 class ClientesController {
 
+    //........................ Busquedad get Clientes ........................
     static get = async (req: Request, res: Response) => {
 
         //repositorio(entidad de Clientes )
@@ -19,7 +20,7 @@ class ClientesController {
         }
     }
 
-    // Busquedad get por ID
+    //........................ Busquedad get Cliente por ID ........................
     static getById = async (req: Request, res: Response) => {
         //pasar datos por id
         const ClientesRepo = AppDataSource.getRepository(Clientes);
@@ -39,7 +40,91 @@ class ClientesController {
 
     }
 
-    // Eliminacion logica del clientes
+    //........................ Creacion de un nuevo cliente ........................
+    static create = async (req: Request, res: Response) => {
+
+        const { cedula, nombre, apellido1, apellido2, email, fechaNac } = req.body;
+
+        // console.log(req.body)
+
+        if (!cedula) {
+            return res.status(400).json({ mesaage: 'Falta el ID' });
+        } else if (!nombre) {
+            return res.status(400).json({ mesaage: 'Falta el Nombre' });
+        } else if (!apellido1) {
+            return res.status(400).json({ mesaage: 'Falta la apellido1' });
+        } else if (!apellido2) {
+            return res.status(400).json({ mesaage: 'Falta el apellido2' });
+        } else if (!email) {
+            return res.status(400).json({ mesaage: 'Falta el email' });
+        } else if (!fechaNac) {
+            return res.status(400).json({ mesaage: 'Falta el fechaNac' });
+        }
+
+        const clienteRepo = AppDataSource.getRepository(Clientes);
+
+        if (await clienteRepo.findOne({ where: { cedula } })) {
+            return res.status(400).json({ mesaage: 'El id ya existe' });
+        }
+
+        try {
+
+            let cli = new Clientes
+            cli.cedula = cedula;
+            cli.nombre = nombre;
+            cli.apellido1 = apellido1;
+            cli.apellido2 = apellido2;
+            cli.email = email;
+            cli.fechaNac = fechaNac;
+
+            await clienteRepo.save(cli);
+            console.log(cli);
+            return res.status(201).json({ message: 'El cliente fue creado' })
+
+        } catch (error) {
+            return res.status(400).json({ message: 'Los datos estan incompletos o erroneos' })
+        }
+    }
+
+    //........................ Actualizar producto ........................
+    static updateById = async (req: Request, res: Response) => {
+
+        const ClientesRepo = AppDataSource.getRepository(Clientes);
+
+        const id = parseInt(req.params['id']);
+        console.log(id)
+        const { nombre, apellido1, apellido2, email, fechaNac } = req.body;
+
+        if (!nombre) {
+            return res.status(400).json({ mesaage: 'Falta el Nombre' });
+        } else if (!apellido1) {
+            return res.status(400).json({ mesaage: 'Falta la apellido1' });
+        } else if (!apellido2) {
+            return res.status(400).json({ mesaage: 'Falta el apellido2' });
+        } else if (!email) {
+            return res.status(400).json({ mesaage: 'Falta el email' });
+        } else if (!fechaNac) {
+            return res.status(400).json({ mesaage: 'Falta el fechaNac' });
+        }
+        let cli: Clientes
+        try {
+            cli = await ClientesRepo.findOneOrFail({ where: { cedula: id, estado: true } })
+        } catch (error) {
+            return res.status(400).json({ message: 'no se encontro con el id' })
+        }
+
+        cli.nombre = nombre;
+        cli.apellido1 = apellido1;
+        cli.apellido2 = apellido2;
+        cli.email = email;
+        cli.fechaNac = fechaNac;
+
+        await ClientesRepo.save(cli);
+        return res.status(201).json({ message: 'El clientes a sido actualizado' })
+
+    }
+
+    //........................ Eliminacion logica del clientes ........................
     static deleteById = async (req: Request, res: Response) => {
         //pasar datos por id
         const ClientesRepo = AppDataSource.getRepository(Clientes);

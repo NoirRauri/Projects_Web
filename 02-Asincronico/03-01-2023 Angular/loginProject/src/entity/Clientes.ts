@@ -17,13 +17,12 @@ export class Clientes {
     apellido2: String
 
     @Column()
-    @IsEmail()
     email: String
 
     @CreateDateColumn()
     fechaNac: Date
 
-    @Column()
+    @Column({ default: true })
     estado: boolean
 
 }

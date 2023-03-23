@@ -17,11 +17,6 @@ export class Productos {
     @IsNotEmpty({ message: 'se requiere Nombre' })
     nombre: String
 
-    // @Column()
-    // @IsInt({ message: 'tiene que ser un valor numerico' })
-    // @IsNotEmpty({ message: 'se requiere categoria' })
-    // idCategoria: number
-
     @Column()
     @IsNotEmpty({ message: 'se requiere precio' })
     @IsPositive({ message: 'tienen que ser mayor que 0' })

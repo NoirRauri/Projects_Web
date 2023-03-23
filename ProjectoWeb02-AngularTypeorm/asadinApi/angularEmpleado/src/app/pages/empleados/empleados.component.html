@@ -1,0 +1,66 @@
+<div class="row">
+    <div class="col-12">
+        <h1>LISTA EMPLEADOS</h1>
+    </div>
+    <div class="col-12">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        
+            <!-- Position Column -->
+            <ng-container matColumnDef="idEmpleado">
+                <th mat-header-cell *matHeaderCellDef>idEmpleado</th>
+                <td mat-cell *matCellDef="let element">{{ element.idEmpleado }}</td>
+            </ng-container>
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef>Nombre</th>
+                <td mat-cell *matCellDef="let element">{{ element.personas.nombre }}</td>
+            </ng-container>
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="apellido1">
+                <th mat-header-cell *matHeaderCellDef>Primer Apellido</th>
+                <td mat-cell *matCellDef="let element">{{ element.personas.apellido1 }}</td>
+            </ng-container>
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="apellido2">
+                <th mat-header-cell *matHeaderCellDef>Segundo Apellido</th>
+                <td mat-cell *matCellDef="let element">{{ element.personas.apellido2 }}</td>
+            </ng-container>
+        
+            <!-- Name Column -->
+            <ng-container matColumnDef="email">
+                <th mat-header-cell *matHeaderCellDef>Email</th>
+                <td mat-cell *matCellDef="let element">{{ element.email }}</td>
+            </ng-container>
+        
+            <!-- Weight Column -->
+            <ng-container matColumnDef="telefono1">
+                <th mat-header-cell *matHeaderCellDef>Telefono Empresa</th>
+                <td mat-cell *matCellDef="let element">{{ element.telefono }}</td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="telefono2">
+                <th mat-header-cell *matHeaderCellDef>Telefono Personal</th>
+                <td mat-cell *matCellDef="let element">{{ element.personas.telefono }}</td>
+            </ng-container>
+        
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="puestos">
+                <th mat-header-cell *matHeaderCellDef>IdPuesto</th>
+                <td mat-cell *matCellDef="let element">{{ element.puestos.idPuesto }}</td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="namePuestos">
+                <th mat-header-cell *matHeaderCellDef>Nombre Puesto</th>
+                <td mat-cell *matCellDef="let element">{{ element.puestos.nombrePuesto }}</td>
+            </ng-container>
+        
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+    </div>
+</div>

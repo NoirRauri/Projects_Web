@@ -15,18 +15,18 @@ export class Empleados {
     @IsString({ message: 'Tiene que ser un valor de caracter' })
     @IsEmail(undefined, { message: "Empleado@Empleado.com" })
     @IsNotEmpty({ message: 'No tiene un valor' })
-    email: String
+    emailEmpleado: String
 
     @Column()
     @IsInt({ message: 'Tiene que ser un valor entero' })
     @IsNotEmpty({ message: 'No tiene un telefono' })
-    telefono: number;
+    telefonoEmpleado: number;
 
     @Column({ default: true })
     estado: boolean
 
     @OneToOne(() => Personas, { cascade: ['insert', 'update'] })
-    @JoinColumn()
+    @JoinColumn({ name: "idPersona" })
     personas: Personas;
 
     @ManyToOne(() => Puestos, (puestos) => puestos.empleados)

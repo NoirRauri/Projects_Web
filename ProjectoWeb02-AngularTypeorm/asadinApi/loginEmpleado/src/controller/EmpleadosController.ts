@@ -48,28 +48,29 @@ class EmpleadosController {
     //........................ Creacion de un nuevo Empleados ........................
     static create = async (req: Request, res: Response) => {
 
-        const { idEmpleado, idPersona, nombre, apellido1, apellido2, emailPers, emailEmpl, telefonoPers, telefonoEmpl, puesto } = req.body;
+        const { idPersona, nombrePersona, apellido1Persona, apellido2Persona, emailPersona,
+            telefonoPersona, idEmpleado, emailEmpleado, telefonoEmpleado, idPuesto } = req.body;
 
-        if (!idEmpleado) {
-            return res.status(400).json({ mesaage: 'Falta el ID' });
-        } else if (!idPersona) {
+        if (!idPersona) {
             return res.status(400).json({ mesaage: 'Falta el idPersona' });
-        } else if (!nombre) {
-            return res.status(400).json({ mesaage: 'Falta el nombre' });
-        } else if (!apellido1) {
-            return res.status(400).json({ mesaage: 'Falta el apellido1' });
-        } else if (!apellido2) {
-            return res.status(400).json({ mesaage: 'Falta el apellido2' });
-        } else if (!emailPers) {
-            return res.status(400).json({ mesaage: 'Falta el emailPers' });
-        } else if (!emailEmpl) {
-            return res.status(400).json({ mesaage: 'Falta la emailEmpl' });
-        } else if (!telefonoPers) {
-            return res.status(400).json({ mesaage: 'Falta la telefonoPers' });
-        } else if (!telefonoEmpl) {
-            return res.status(400).json({ mesaage: 'Falta la telefonoEmpl' });
-        } else if (!puesto) {
-            return res.status(400).json({ mesaage: 'Falta la puestos' });
+        } else if (!nombrePersona) {
+            return res.status(400).json({ mesaage: 'Falta el nombre Persona' });
+        } else if (!apellido1Persona) {
+            return res.status(400).json({ mesaage: 'Falta el apellido1 Persona' });
+        } else if (!apellido2Persona) {
+            return res.status(400).json({ mesaage: 'Falta el apellido2 Persona' });
+        } else if (!emailPersona) {
+            return res.status(400).json({ mesaage: 'Falta el email Persona' });
+        } else if (!telefonoPersona) {
+            return res.status(400).json({ mesaage: 'Falta el telefono Persona' });
+        } else if (!idEmpleado) {
+            return res.status(400).json({ mesaage: 'Falta la id Empleado' });
+        } else if (!emailEmpleado) {
+            return res.status(400).json({ mesaage: 'Falta la email Empleado' });
+        } else if (!telefonoEmpleado) {
+            return res.status(400).json({ mesaage: 'Falta la telefono Empleado' });
+        } else if (!idPuesto) {
+            return res.status(400).json({ mesaage: 'Falta la id Puesto' });
         }
 
         const empleadoRepo = AppDataSource.getRepository(Empleados);
@@ -80,9 +81,9 @@ class EmpleadosController {
 
         const puestoRepo = AppDataSource.getRepository(Puestos);
 
-        let puest:Puestos;
+        let puest: Puestos;
         try {
-            puest = await puestoRepo.findOneOrFail({ where: { idPuesto: puesto, estado: true } })
+            puest = await puestoRepo.findOneOrFail({ where: { idPuesto, estado: true } })
         } catch (error) {
             return res.status(400).json({ message: 'no se encontro el puesto' })
         }
@@ -93,15 +94,15 @@ class EmpleadosController {
             let empl = new Empleados();
 
             pers.idPersona = idPersona;
-            pers.nombre = nombre;
-            pers.apellido1 = apellido1;
-            pers.apellido2 = apellido2;
-            pers.email = emailPers;
-            pers.telefono = telefonoPers;
+            pers.nombrePersona = nombrePersona;
+            pers.apellido1Persona = apellido1Persona;
+            pers.apellido2Persona = apellido2Persona;
+            pers.emailPersona = emailPersona;
+            pers.telefonoPersona = telefonoPersona;
 
             empl.idEmpleado = idEmpleado;
-            empl.email = emailEmpl;
-            empl.telefono = telefonoEmpl;
+            empl.emailEmpleado = emailEmpleado;
+            empl.telefonoEmpleado = telefonoEmpleado;
             empl.personas = pers;
             empl.puestos = puest;
 
@@ -110,7 +111,7 @@ class EmpleadosController {
             const errorEmpl = await validate(empl, { validationError: { target: false, value: false } })
             if (errorPer.length > 0) {
                 return res.status(400).json(errorPer)
-            } 
+            }
             if (errorEmpl.length > 0) {
                 return res.status(400).json(errorEmpl)
             }
@@ -128,31 +129,30 @@ class EmpleadosController {
     //........................ Actualizar producto ........................
     static updateById = async (req: Request, res: Response) => {
 
-        const EmpleadosRepo = AppDataSource.getRepository(Empleados);
-
         const id = parseInt(req.params['id']);
 
-        const { idEmpleado, idPersona, nombre, apellido1, apellido2, emailPers, emailEmpl, telefonoPers, telefonoEmpl, puesto } = req.body;
+        const { idPersona, nombrePersona, apellido1Persona, apellido2Persona, emailPersona,
+            telefonoPersona, idEmpleado, emailEmpleado, telefonoEmpleado, idPuesto } = req.body;
 
         if (!idEmpleado) {
             return res.status(400).json({ mesaage: 'Falta el ID' });
         } else if (!idPersona) {
             return res.status(400).json({ mesaage: 'Falta el idPersona' });
-        } else if (!nombre) {
+        } else if (!nombrePersona) {
             return res.status(400).json({ mesaage: 'Falta el nombre' });
-        } else if (!apellido1) {
+        } else if (!apellido1Persona) {
             return res.status(400).json({ mesaage: 'Falta el apellido1' });
-        } else if (!apellido2) {
+        } else if (!apellido2Persona) {
             return res.status(400).json({ mesaage: 'Falta el apellido2' });
-        } else if (!emailPers) {
+        } else if (!emailPersona) {
             return res.status(400).json({ mesaage: 'Falta el emailPers' });
-        } else if (!emailEmpl) {
+        } else if (!telefonoPersona) {
             return res.status(400).json({ mesaage: 'Falta la emailEmpl' });
-        } else if (!telefonoPers) {
+        } else if (!emailEmpleado) {
             return res.status(400).json({ mesaage: 'Falta la telefonoPers' });
-        } else if (!telefonoEmpl) {
+        } else if (!telefonoEmpleado) {
             return res.status(400).json({ mesaage: 'Falta la telefonoEmpl' });
-        } else if (!puesto) {
+        } else if (!idPuesto) {
             return res.status(400).json({ mesaage: 'Falta la puesto' });
         }
 
@@ -160,14 +160,15 @@ class EmpleadosController {
         const puestoRepo = AppDataSource.getRepository(Puestos);
 
         let empl: Empleados;
-        let puest:Puestos;
+        let puest: Puestos;
+
         try {
             empl = await empleadoRepo.findOneOrFail({ where: { idEmpleado: id, estado: true } })
         } catch (error) {
             return res.status(400).json({ message: 'no se encontro con el id' })
         }
         try {
-            puest = await puestoRepo.findOneOrFail({ where: { idPuesto: puesto, estado: true } })
+            puest = await puestoRepo.findOneOrFail({ where: { idPuesto, estado: true } })
         } catch (error) {
             return res.status(400).json({ message: 'no se encontro con el id' })
         }
@@ -175,21 +176,21 @@ class EmpleadosController {
         let pers = new Personas;
 
         pers.idPersona = idPersona;
-        pers.nombre = nombre;
-        pers.apellido1 = apellido1;
-        pers.apellido2 = apellido2;
-        pers.email = emailPers;
-        pers.telefono = telefonoPers;
+        pers.nombrePersona = nombrePersona;
+        pers.apellido1Persona = apellido1Persona;
+        pers.apellido2Persona = apellido2Persona;
+        pers.emailPersona = emailPersona;
+        pers.telefonoPersona = telefonoPersona;
 
         empl.idEmpleado = idEmpleado;
-        empl.email = emailEmpl;
-        empl.telefono = telefonoEmpl;
+        empl.emailEmpleado = emailEmpleado;
+        empl.telefonoEmpleado = telefonoEmpleado;
         empl.personas = pers;
         empl.puestos = puest;
 
         const errorPer = await validate(pers, { validationError: { target: false, value: false } })
         const errorEmpl = await validate(empl, { validationError: { target: false, value: false } })
-        
+
         if (errorPer.length > 0) {
             return res.status(400).json(errorPer)
         } else if (errorEmpl.length > 0) {

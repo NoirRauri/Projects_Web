@@ -7,12 +7,6 @@ const routes = Router();
 routes.get('', PersonasController.get);
 // ruta para buscar un producto por ID
 routes.get('/:id', PersonasController.getById);
-// // ruta para crear un producto
-// routes.post('/create', PersonasController.create)
-// // ruta para update un producto
-// routes.patch('/update/:id', PersonasController.updateById)
-// // ruta para eliminacion logica de un producto
-// // routes.delete('/:id', PersonasController.deleteById);
 
 
 
